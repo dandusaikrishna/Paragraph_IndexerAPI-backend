@@ -1,0 +1,112 @@
+{
+  "info": {
+    "name": "Codemonk Backend API",
+    "_postman_id": "12345678-abcd-efgh-ijkl-1234567890ab",
+    "description": "Postman collection for Codemonk Backend Intern Assignment API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Register User",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"email\": \"user@example.com\",\n  \"password\": \"strongpassword123\",\n  \"name\": \"User Name\",\n  \"dob\": \"1990-01-01\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8000/api/register/",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8000",
+          "path": ["api", "register", ""]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Login User",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"email\": \"user@example.com\",\n  \"password\": \"strongpassword123\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8000/api/login/",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8000",
+          "path": ["api", "login", ""]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Submit Paragraphs",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{access_token}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"text\": \"Paragraph one.\\n\\nParagraph two.\\n\\nParagraph three.\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8000/api/paragraphs/",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8000",
+          "path": ["api", "paragraphs", ""]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Search Word",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{access_token}}"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8000/api/search/?word=lorem",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8000",
+          "path": ["api", "search", ""],
+          "query": [
+            {
+              "key": "word",
+              "value": "lorem"
+            }
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
