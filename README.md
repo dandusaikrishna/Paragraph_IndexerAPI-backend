@@ -1,8 +1,8 @@
 # Codemonk Backend Intern Assignment
 
-[![Python](https://img.shields.io/badge/python-3.x-blue)](https://www.python.org/)
-[![Django](https://img.shields.io/badge/django-4.x-green)](https://www.djangoproject.com/)
-[![License: MIT](https://img.shields.io/badge/license-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Python](https://img.shields.io/badge/python-3.x-blue)](https://www.python.org/)  
+[![Django](https://img.shields.io/badge/django-4.x-green)](https://www.djangoproject.com/)  
+[![License: MIT](https://img.shields.io/badge/license-MIT-yellow.svg)](https://opensource.org/licenses/MIT)  
 
 ## Project Description
 
@@ -22,10 +22,10 @@ codemonk_backend/               # Root directory
 │   ├── urls.py                 # App-specific URL patterns
 │   └── tests.py                # Unit tests
 │
-├── codemonk_backend/          # Django project settings
+├── codemonk_backend/           # Django project settings
 │   ├── __init__.py
-│   ├── settings.py            # Database, Installed apps, JWT config
-│   ├── urls.py                # Project-level URL config
+│   ├── settings.py             # Database, Installed apps, JWT config
+│   ├── urls.py                 # Project-level URL config
 │   └── wsgi.py
 │
 ├── .env                       # Environment variables (e.g. DB, SECRET_KEY)
@@ -35,31 +35,29 @@ codemonk_backend/               # Root directory
 ├── requirements.txt           # Python dependencies
 └── README.md
 ```
-└── README.md
-venv/                   # Python virtual environment (should be excluded from version control)
 
 ## Features
 
-- Custom user model with authentication
-- Submit multiple paragraphs of text
-- Tokenize and index words to paragraphs
-- Search API to find top 10 paragraphs containing a word
-- PostgreSQL database backend
-- Docker and Docker Compose setup for containerized deployment
-- Swagger API documentation for easy API exploration
+- Custom user model with authentication  
+- Submit multiple paragraphs of text  
+- Tokenize and index words to paragraphs  
+- Search API to find top 10 paragraphs containing a word  
+- PostgreSQL database backend  
+- Docker and Docker Compose setup for containerized deployment  
+- Swagger API documentation for easy API exploration  
 
 ## Tech Stack
 
-- Python 3
-- Django 4.x
-- Django Rest Framework
-- PostgreSQL
-- Docker & Docker Compose
+- Python 3  
+- Django 4.x  
+- Django Rest Framework  
+- PostgreSQL  
+- Docker & Docker Compose  
 
 ## Prerequisites
 
-- Docker and Docker Compose installed and available in your system PATH
-- Alternatively, Python 3 and PostgreSQL installed locally if not using Docker
+- Docker and Docker Compose installed and available in your system PATH  
+- Alternatively, Python 3 and PostgreSQL installed locally if not using Docker  
 
 ## Setup and Run
 
@@ -67,7 +65,7 @@ venv/                   # Python virtual environment (should be excluded from ve
 
 ```bash
 git clone <repository-url>
-cd codemonck
+cd codemonk
 ```
 
 2. Build and run the Docker containers:
@@ -80,7 +78,7 @@ docker-compose up --build
 
 4. Access Swagger API documentation at: `http://localhost:8000/swagger/`
 
-## 🔗 API Endpoints
+## API Endpoints
 
 | Endpoint              | Method | Description                                         |
 |-----------------------|--------|-----------------------------------------------------|
@@ -88,7 +86,6 @@ docker-compose up --build
 | `/api/login/`         | POST   | Authenticate and receive JWT tokens                 |
 | `/api/paragraphs/`    | POST   | Upload text containing multiple paragraphs          |
 | `/api/search/?word=`  | GET    | Retrieve top 10 paragraphs containing the word      |
-
 
 
 
