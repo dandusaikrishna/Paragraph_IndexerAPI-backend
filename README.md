@@ -92,27 +92,39 @@ docker-compose up --build
 
 
 
-## Usage
+## 📸 API Testing with Postman
 
-1. Register a new user and log in to obtain an authentication token.
 
-2. Use the token to authenticate subsequent API requests by including it in the `Authorization` header:
+1. Register a new user
 
-```
-Authorization: Token your_token_here
-```
+<img width="1440" alt="Screenshot 2025-07-05 at 00 37 55" src="https://github.com/user-attachments/assets/bf7cc768-f98c-4593-a71c-8640ad3fffba" />
+
+2. login to obtain an authentication token
+  
+<img width="1440" alt="Screenshot 2025-07-05 at 00 40 52" src="https://github.com/user-attachments/assets/860a860a-19bd-46db-a0c0-a71344f6da9f" />
+
 
 3. Submit text paragraphs via the endpoint:
 
 ```
-POST /api/paragraphs/
+[POST /api/paragraphs/](http://localhost:8000/api/paragraphs/)
 ```
+<img width="1440" alt="Screenshot 2025-07-05 at 00 42 07" src="https://github.com/user-attachments/assets/ffcbd9f4-fee8-455c-9685-b2633785e0b8" />
+
+
 
 4. Search for paragraphs containing a specific word via the endpoint:
 
 ```
-GET /api/search/?word=yourword
+[GET /api/search/?word=Maecenas] (http://localhost:8000/api/search/?word= Maecenas)
 ```
+<img width="1440" alt="Screenshot 2025-07-05 at 00 43 47" src="https://github.com/user-attachments/assets/141ee6cd-dd90-43f6-bfa2-e11c49fe6506" />
+
+```
+[[GET /api/search/?word=lorem] (http://localhost:8000/api/search/?word= lorem)]
+```
+<img width="1440" alt="Screenshot 2025-07-05 at 00 46 33" src="https://github.com/user-attachments/assets/8235287f-1806-482b-86ac-a8c6eef2d711" />
+
 
 ## Testing
 
