@@ -91,35 +91,60 @@ docker-compose up --build
 
 ## 📸 API Testing with Postman
 
+This section demonstrates how to interact with the API using Postman. The screenshots showcase real examples of requests and responses for each endpoint, helping you understand how to test and verify API functionality effectively.
 
-1. Register a new user
+## 1. 🔐 Register a New User
 
+Make a POST request to `/api/register/` with the required user details like name, email,password and dob.
+
+## ✅ Example 
 <img width="1440" alt="Screenshot 2025-07-05 at 00 37 55" src="https://github.com/user-attachments/assets/bf7cc768-f98c-4593-a71c-8640ad3fffba" />
 
-2. login to obtain an authentication token
-  
+## 📌 After Successful Registration:
+> This endpoint creates a new user and stores their information in the PostgreSQL database using the default `api_user`table.
+
+> A unique id is generated for the user and returned in the response.
+
+> Authentication tokens are not generated at this step. To obtain tokens, the user must log in using the /api/login/ endpoint.
+
+
+## 2. 🔑 Login to Obtain an Authentication Token
+
+Send a POST request to `/api/login/` with valid credentials.
+If the credentials are correct, the server returns access and refresh JWT tokens which are required for authenticated API calls.
+
+## ✅ Example   
 <img width="1440" alt="Screenshot 2025-07-05 at 00 40 52" src="https://github.com/user-attachments/assets/860a860a-19bd-46db-a0c0-a71344f6da9f" />
 
 
-3. Submit text paragraphs via the endpoint:
+## 3. 📝 Submit Text Paragraphs
 
-```
-[POST /api/paragraphs/](http://localhost:8000/api/paragraphs/)
-```
+- Send a POST request to /api/paragraphs/ with a block of text containing multiple paragraphs (separated by double newlines \n\n).
+- The API processes the input, splits it into separate paragraphs, indexes the words, and stores them in the database.
+
+# 📎 Authorization: Include the Authorization: Bearer <your_access_token> header.
+
+## ✅ Example 
 <img width="1440" alt="Screenshot 2025-07-05 at 00 42 07" src="https://github.com/user-attachments/assets/ffcbd9f4-fee8-455c-9685-b2633785e0b8" />
 
 
 
-4. Search for paragraphs containing a specific word via the endpoint:
+ ## 4. 🔍 Search for Paragraphs by Word
 
-```
-[GET /api/search/?word=Maecenas] (http://localhost:8000/api/search/?word= Maecenas)
-```
+- Make a GET request to `/api/search/?word=<Maecenas>` to find and return the top 10 most relevant paragraphs that contain the given word.
+
+- The search is case-insensitive.
+
+- Results are ranked based on relevance.
+
+📎 Authorization: Required
+
+## ✅ Example: Search for Maecenas
 <img width="1440" alt="Screenshot 2025-07-05 at 00 43 47" src="https://github.com/user-attachments/assets/141ee6cd-dd90-43f6-bfa2-e11c49fe6506" />
 
-```
-[[GET /api/search/?word=lorem] (http://localhost:8000/api/search/?word= lorem)]
-```
+
+## ✅ Example: Search for lorem
+
 <img width="1440" alt="Screenshot 2025-07-05 at 00 46 33" src="https://github.com/user-attachments/assets/8235287f-1806-482b-86ac-a8c6eef2d711" />
 
 
