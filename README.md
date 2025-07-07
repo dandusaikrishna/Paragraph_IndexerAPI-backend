@@ -122,7 +122,7 @@ If the credentials are correct, the server returns access and refresh JWT tokens
 - Send a POST request to /api/paragraphs/ with a block of text containing multiple paragraphs (separated by double newlines \n\n).
 - The API processes the input, splits it into separate paragraphs, indexes the words, and stores them in the database.
 
-# 📎 Authorization: Include the Authorization: Bearer <your_access_token> header.
+ 📎 Authorization: Include the Authorization: Bearer <your_access_token> header.
 
 ## ✅ Example 
 <img width="1440" alt="Screenshot 2025-07-05 at 00 42 07" src="https://github.com/user-attachments/assets/ffcbd9f4-fee8-455c-9685-b2633785e0b8" />
