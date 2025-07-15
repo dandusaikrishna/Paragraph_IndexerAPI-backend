@@ -1,4 +1,4 @@
-# Codemonk Backend Intern Assignment
+# ParagraphIndexerAPI
 
 [![Python](https://img.shields.io/badge/python-3.x-blue)](https://www.python.org/)  
 [![Django](https://img.shields.io/badge/django-4.x-green)](https://www.djangoproject.com/)  
