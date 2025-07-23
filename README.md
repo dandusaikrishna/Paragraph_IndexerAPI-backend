@@ -60,7 +60,6 @@ codemonk_backend/               # Root directory
 - Alternatively, Python 3 and PostgreSQL installed locally if not using Docker  
 
 ## Setup and Run
-
 1. Clone the repository:
 
 ```bash
